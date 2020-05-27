@@ -7,7 +7,7 @@ type = input("Post type (eg: text, photo): ")
 apikey = input("API Key (check the readme to find this): ")
 
 #Variable Moment
-target='http://api.tumblr.com/v2/blog/' + blog + '/posts/' + type + '?api_key=' + apikey
+target='https://api.tumblr.com/v2/blog/' + blog + '/posts/' + type + '?api_key=' + apikey
 data = requests.get(target).json()
 postcount = data['response']['total_posts']
 
